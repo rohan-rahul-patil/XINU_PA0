@@ -1,0 +1,46 @@
+Answer 1) 
+
+	a) Exponential Distribution Scheduling Policy:
+	
+	Advantages:
+	-> No starvation problem.
+	-> Scheduling follows a random distribution, hence there is continuous switching between process.
+	-> Since the policy is random the Schedular does not need to maintain any data for scheduling the next process.
+
+	Disadvantages:
+	-> Since the policy is random, it is unpredictable.
+	-> Uncertainty may cause problems while debugging of fixing errors.
+	-> Lower priority processes are scheduled more times. This increases the turnaround time of the higher priority processes.
+	-> A good random function is needed to give justice to this policy.
+
+
+	 b) Linux Based Scheduling Policy:
+
+	Advantages:
+	-> No starvation problem.
+	-> Each process in the ready queue is scheduled during an epoch which increases the response time of the processes.
+	-> If a process has not used its time slice then it can use it in the next epoch.
+	-> Each process is given a fair chance to execute during an epoch.
+
+	Disadvantages:
+	-> Policy is complex and involves a lot of calculations which may use up a lot of CPU time.
+	-> if there are many processes in an epoch and if a proces with very high priority arrves in the ready queue then it has to wait till 		 the next epoch. 
+
+	c) Round Roin Xinu Scheduling Policy:
+		
+	Advantages:
+	-> Simple algorithm with less calculations.
+	-> Process are scheduled accoriding to decreasing order of priority.
+
+	Disadvantages:
+	-> Low priority process can get starved.
+
+______________________________________________________________________________________________________________________________________________
+
+
+Answer 2) 
+	
+	The NULL process is a special case in Exponential Distribution Scheduler and Linux like Schedular. Special care needs to be taken to handle the NULL process, but the NULL process is not a special case in the Round Robin Xinu Schedular it gets automatically handled.
+
+
+______________________________________________________________________________________________________________________________________________	
